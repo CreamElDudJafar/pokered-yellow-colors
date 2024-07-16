@@ -27,16 +27,16 @@ PromptUserToPlaySlots:
 	ld a, $e4
 	ldh [rOBP0], a
 	call UpdateGBCPal_OBP0
-	ld hl, wd730
-	set 6, [hl]
+	ld hl, wStatusFlags5
+	set BIT_NO_TEXT_DELAY, [hl]
 	xor a
 	ld [wSlotMachineAllowMatchesCounter], a
 	ld hl, wStoppingWhichSlotMachineWheel
 	ld bc, $14
 	call FillMemory
 	call MainSlotMachineLoop
-	ld hl, wd730
-	res 6, [hl]
+	ld hl, wStatusFlags5
+	res BIT_NO_TEXT_DELAY, [hl]
 	xor a
 	ld [wSlotMachineAllowMatchesCounter], a
 	call GBPalWhiteOutWithDelay3
