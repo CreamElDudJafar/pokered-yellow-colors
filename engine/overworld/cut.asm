@@ -120,10 +120,11 @@ LoadCutGrassAnimationTilePattern:
 WriteCutOrBoulderDustAnimationOAMBlock:
 	call GetCutOrBoulderDustAnimationOffsets
 	ld a, $9
-	ld de, CutOrBoulderDustAnimationTilesAndAttributes
+	ld de, .OAMBlock
 	jp WriteOAMBlock
 
-CutOrBoulderDustAnimationTilesAndAttributes:
+.OAMBlock:
+; tile ID, attributes
 	db $FC,$14,$FD,$14
 	db $FE,$14,$FF,$14
 
