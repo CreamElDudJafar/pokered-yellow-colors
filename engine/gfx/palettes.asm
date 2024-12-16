@@ -170,7 +170,7 @@ SetPal_Overworld:
 	ld [wDefaultPaletteCommand], a
 	ret
 .PokemonTowerOrAgatha
-	ld a, PAL_GREYMON - 1
+	ld a, PAL_GRAYMON - 1
 	jr .town
 .caveOrBruno
 	ld a, PAL_CAVE - 1
