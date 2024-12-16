@@ -2505,7 +2505,7 @@ FallingObjects_UpdateOAMEntry:
 	ld [wdef5], a
 .asm_79e5c
 	inc hl
-	ld a, (1 << OAM_X_FLIP)
+	ld a, 1 << OAM_X_FLIP
 .next2
 	ld b, a
 	ld a, [wdef5]
