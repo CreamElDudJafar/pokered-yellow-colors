@@ -1815,8 +1815,7 @@ AnimationMinimizeMon:
 
 MinimizedMonSprite:
 ; 8x5 partial tile graphic
-pusho
-opt b.X ; . = 0, X = 1
+pusho b.X ; . = 0, X = 1
 	db %...XX...
 	db %..XXXX..
 	db %.XXXXXX.
