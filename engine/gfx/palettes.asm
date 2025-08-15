@@ -594,7 +594,7 @@ SendSGBPackets:
 	pop hl
 	call InitGBCPalettes
 	ld a, [rLCDC]
-	and rLCDC_ENABLE_MASK
+	and 1 << rLCDC_ENABLE
 	ret z
 	call Delay3
 	ret
@@ -736,7 +736,7 @@ TransferCurBGPData::
 	ld de, rBGPD
 	ld hl, wGBCPal
 	ldh a, [rLCDC]
-	and rLCDC_ENABLE_MASK
+	and 1 << rLCDC_ENABLE
 	jr nz, .lcdEnabled
 	rept NUM_COLORS
 	call TransferPalColorLCDDisabled
@@ -777,7 +777,7 @@ BufferBGPPal::
 TransferBGPPals::
 ; Transfer the buffered BG palettes.
 	ldh a, [rLCDC]
-	and rLCDC_ENABLE_MASK
+	and 1 << rLCDC_ENABLE
 	jr z, .lcdDisabled
 	; have to wait until LCDC is disabled
 	; LCD should only ever be disabled during the V-blank period to prevent hardware damage
@@ -815,7 +815,7 @@ TransferCurOBPData:
 	ld de, rOBPD
 	ld hl, wGBCPal
 	ldh a, [rLCDC]
-	and rLCDC_ENABLE_MASK
+	and 1 << rLCDC_ENABLE
 	jr nz, .lcdEnabled
 	rept NUM_COLORS
 	call TransferPalColorLCDDisabled
@@ -993,7 +993,7 @@ TransferMonPal:
 	push af
 	ld a, d
 	push af
-	ld a, [wcf91]
+	ld a, [wCurPartySpecies]
 	cp NUM_POKEMON_INDEXES + 1
 	jr c, .isMon
 	sub NUM_POKEMON_INDEXES + 1

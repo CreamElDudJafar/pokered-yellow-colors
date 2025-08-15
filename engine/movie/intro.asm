@@ -36,7 +36,7 @@ IF DEF(_BLUE)
 	ld d, CONVERT_OBP0
 	ld e, 0
 	ld a, JIGGLYPUFF
-	ld [wcf91], a
+	ld [wCurPartySpecies], a
 	callfar TransferMonPal
 	pop de
 ENDC
