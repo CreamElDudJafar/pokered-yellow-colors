@@ -54,7 +54,7 @@ DEF rLCDC_DEFAULT EQU %11100011
 	call ClearVram
 
 	ld hl, STARTOF(HRAM)
-	ld bc, SIZEOF(HRAM)
+	ld bc, SIZEOF(HRAM) - 1
 	call FillMemory
 
 	call ClearSprites

@@ -27,6 +27,20 @@ PlayIntroScene:
 	ldh [rBGP], a
 	ldh [rOBP0], a
 	ldh [rOBP1], a
+	call UpdateGBCPal_BGP
+	call UpdateGBCPal_OBP0
+	call UpdateGBCPal_OBP1
+
+IF DEF(_BLUE)
+	push de
+	ld d, CONVERT_OBP0
+	ld e, 0
+	ld a, JIGGLYPUFF
+	ld [wcf91], a
+	callfar TransferMonPal
+	pop de
+ENDC
+
 	xor a
 	ldh [hSCX], a
 	ld b, TILEMAP_GENGAR_INTRO_1
@@ -309,6 +323,7 @@ PlayShootingStar:
 	farcall LoadCopyrightAndTextBoxTiles
 	ldpal a, SHADE_BLACK, SHADE_DARK, SHADE_LIGHT, SHADE_WHITE
 	ldh [rBGP], a
+	call UpdateGBCPal_BGP
 	ld c, 180
 	call DelayFrames
 	call ClearScreen

@@ -42,6 +42,7 @@ OverworldLoop::
 	call DelayFrame
 OverworldLoopLessDelay::
 	call DelayFrame
+	callfar GBCSetCPU2xSpeed
 	call LoadGBPal
 	ld a, [wd736]
 	bit 6, a ; jumping down a ledge?

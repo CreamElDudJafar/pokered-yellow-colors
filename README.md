@@ -1,6 +1,21 @@
 # Pokémon Red and Blue [![Build Status][ci-badge]][ci]
 
-This is a disassembly of Pokémon Red and Blue.
+This is a disassembly of Pokémon Red and Blue with GBC/Yellow Colors.
+
+Credits for making this SPECIFIC version happen:
+Jojobear13: Game: ShinPokeRed (Originally backporting Pokemon Yellow Functions)
+Vortyne/Vortiene: Game: PureRGB (Also backported Pokemon Yellow Functions)
+RainbowMetalPigeon
+ZetaPhoenix
+Engezerstorung
+
+
+Tutorials Used:
+https://github.com/pret/pokeyellow/wiki/Free-some-space-in-BANK-1E (RainbowMetalPigeon and Vortiene)
+https://github.com/pret/pokeyellow/wiki/Free-some-space-in-the-Home-BANK (Vortiene)
+https://github.com/pret/pokered/wiki/Free-MORE-some-space-in-the-Home-BANK (ZetaPhoenix, Engezerstorung and Vortiene)
+
+
 
 It builds the following ROMs:
 
