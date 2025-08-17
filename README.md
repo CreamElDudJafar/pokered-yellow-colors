@@ -12,9 +12,7 @@ Engezerstorung
 
 Tutorials Used:
 https://github.com/pret/pokeyellow/wiki/Free-some-space-in-BANK-1E (RainbowMetalPigeon and Vortiene)
-https://github.com/pret/pokeyellow/wiki/Free-some-space-in-the-Home-BANK (Vortiene)
 https://github.com/pret/pokered/wiki/Free-MORE-some-space-in-the-Home-BANK (ZetaPhoenix, Engezerstorung and Vortiene)
-
 
 
 It builds the following ROMs:

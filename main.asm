@@ -320,7 +320,6 @@ INCLUDE "engine/gfx/mon_icons.asm"
 INCLUDE "engine/events/in_game_trades.asm"
 INCLUDE "engine/gfx/palettes.asm"
 INCLUDE "engine/menus/save.asm"
-INCLUDE "engine/gfx/scroll_gfx_horizontally.asm"
 
 
 SECTION "Itemfinder 1", ROMX
@@ -368,6 +367,4 @@ SECTION "CGB Mode Code", ROMX
 INCLUDE "data/sgb/bg_map_attributes.asm"
 INCLUDE "engine/gfx/bg_map_attributes.asm"
 INCLUDE "engine/cgb/gbc_cpu_speed.asm"
-
-
-
+INCLUDE "engine/gfx/scroll_gfx_horizontally.asm"
