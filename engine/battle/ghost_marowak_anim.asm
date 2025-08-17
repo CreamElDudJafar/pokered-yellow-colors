@@ -77,7 +77,7 @@ CopyMonPicFromBGToSpriteVRAM:
 	ld [hli], a
 	ld a, d
 	ld [hli], a
-	ld a, $14
+	ld a, OAM_PAL1 | OAM_HIGH_PALS
 	ld [hli], a
 	inc d
 	dec c

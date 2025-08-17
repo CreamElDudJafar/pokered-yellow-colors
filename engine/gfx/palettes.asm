@@ -666,11 +666,11 @@ GetCGBBasePalAddress::
 	ret
 	
 DMGPalToCGBPal::
-; Populate wGBCPal with colors from a base palette, selected using one of the
+; Populate wCGBPal with colors from a base palette, selected using one of the
 ; DMG palette registers.
 ; Input:
 ; a = which DMG palette register
-; de = address of GBC base palette
+; de = address of CGB base palette
 	and a
 	jr nz, .notBGP
 	ldh a, [rBGP]
@@ -696,7 +696,7 @@ DMGPalToCGBPal::
 		ld e, a
 		ld a, [hl]
 		ld d, a
-		;now load the value that HL points to into wGBCPal offset by the loop
+		;now load the value that HL points to into wCGBPal offset by the loop
 		ld a, e
 		ld [wCGBPal + color_index * 2], a
 		ld a, d
@@ -747,7 +747,7 @@ TransferCurBGPData::
 
 BufferBGPPal:: 
 ; Copy wCGBPal to palette a in wBGPPalsBuffer.
-; a = indexed offset of wGBCBasePalPointers
+; a = indexed offset of wCGBBasePalPointers
 	push de
 	;multiply index by 8 since each index represents 8 bytes worth of data
 	add a
@@ -760,7 +760,7 @@ BufferBGPPal::
 	add hl, de	;hl now points to wBGPPalsBuffer + 8*index
 	ld de, wCGBPal
 	ld c, PAL_SIZE
-.loop	;copy the 8 bytes of wGBCPal to its indexed spot in wBGPPalsBuffer
+.loop	;copy the 8 bytes of wCGBPal to its indexed spot in wBGPPalsBuffer
 	ld a, [de]
 	ld [hli], a
 	inc de
@@ -859,7 +859,7 @@ _UpdateCGBPal_BGP::
 		xor a ; CONVERT_BGP
 		call DMGPalToCGBPal
 		ld a, index
-		call BufferBGPPal	; Copy wGBCPal to palette indexed in wBGPPalsBuffer.
+		call BufferBGPPal	; Copy wCGBPal to palette indexed in wBGPPalsBuffer.
 	ENDR
 
 	call TransferBGPPals	;Transfer wBGPPalsBuffer contents to rBGPD
@@ -897,7 +897,7 @@ _UpdateCGBPal_OBP::
 	ret
 	
 TranslatePalPacketToBGMapAttributes::
-; translate the SGB pals for blk packets into something usable for the GBC
+; translate the SGB pals for blk packets into something usable for the CGB
 	push hl
 	pop de
 	ld hl, PalPacketPointers
