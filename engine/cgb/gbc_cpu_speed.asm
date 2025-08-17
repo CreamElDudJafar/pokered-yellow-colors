@@ -1,6 +1,6 @@
 ;Sets 1x CPU speed if we're on GBC
 GBCSetCPU1xSpeed::
-	ldh a, [hGBC]
+	ldh a, [hCGB]
 	and a
 	ret z ; double speed is only a GBC feature
 	ldh a, [rKEY1]
@@ -9,7 +9,7 @@ GBCSetCPU1xSpeed::
 	ret
 ;Set 2x cpu speed if we're on GBC
 GBCSetCPU2xSpeed::
-	ldh a, [hGBC]
+	ldh a, [hCGB]
 	and a
 	ret z ; double speed is only a GBC feature
 	ldh a, [rKEY1]

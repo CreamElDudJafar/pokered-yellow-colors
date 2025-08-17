@@ -73,8 +73,8 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	ldh [rBGP], a
 	ldh [rOBP0], a
 	ldh [rOBP1], a
-	call UpdateGBCPal_OBP0
-	call UpdateGBCPal_OBP1
+	call UpdateCGBPal_OBP0
+	call UpdateCGBPal_OBP1
 .slideSilhouettesLoop ; slide silhouettes of the player's pic and the enemy's pic onto the screen
 	ld h, b
 	ld l, $40
@@ -87,7 +87,7 @@ SlidePlayerAndEnemySilhouettesOnScreen:
 	push af
 	ld a, b
 	cp $72
-	call z, UpdateGBCPal_BGP
+	call z, UpdateCGBPal_BGP
 	pop af
 	call SlidePlayerHeadLeft
 	ld a, c
@@ -913,8 +913,8 @@ ReplaceFaintedEnemyMon:
 	ldpal a, SHADE_BLACK, SHADE_DARK, SHADE_LIGHT, SHADE_WHITE
 	ld [rOBP0], a
 	ld [rOBP1], a
-	call UpdateGBCPal_OBP0
-	call UpdateGBCPal_OBP1
+	call UpdateCGBPal_OBP0
+	call UpdateCGBPal_OBP1
 	callfar DrawEnemyPokeballs
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING

@@ -363,11 +363,11 @@ INCLUDE "engine/movie/splash.asm"
 INCLUDE "engine/movie/hall_of_fame.asm"
 
 
-SECTION "GBC Mode Code", ROMX
+SECTION "CGB Mode Code", ROMX
 
 INCLUDE "data/sgb/bg_map_attributes.asm"
 INCLUDE "engine/gfx/bg_map_attributes.asm"
-INCLUDE "engine/gbc/gbc_cpu_speed.asm"
+INCLUDE "engine/cgb/gbc_cpu_speed.asm"
 
 
 

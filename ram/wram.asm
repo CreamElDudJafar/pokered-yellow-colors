@@ -2038,8 +2038,8 @@ UNION
 	ds 128
 NEXTU
 
-wGBCBasePalPointers:: ds NUM_ACTIVE_PALS * 2 ; 8 bytes
-wGBCPal:: ds PALETTE_SIZE ; 8 bytes
+wCGBBasePalPointers:: ds NUM_ACTIVE_PALS * 2 ; 8 bytes
+wCGBPal:: ds PALETTE_SIZE ; 8 bytes
 wLastBGP::db
 wLastOBP0::db
 wLastOBP1::db 

@@ -400,6 +400,6 @@ hDisableJoypadPolling:: db
 hFlagsFFFA:: db
 	ds 3
 hHRAMend::
-hGBC:: db
+hCGB:: db
 
 ENDSECTION

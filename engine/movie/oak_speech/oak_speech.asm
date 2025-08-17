@@ -82,7 +82,7 @@ OakSpeech:
 	call LoadFlippedFrontSpriteByMonIndex	
 	ld a, %11100100
 	ld [rBGP], a
-	call UpdateGBCPal_BGP	
+	call UpdateCGBPal_BGP	
 	push af
 	push bc
 	push hl
@@ -201,7 +201,7 @@ FadeInIntroPic:
 .next
 	ld a, [hli]
 	ldh [rBGP], a
-	call UpdateGBCPal_BGP
+	call UpdateCGBPal_BGP
 	ld c, 10
 	call DelayFrames
 	dec b
@@ -219,7 +219,7 @@ IntroFadePalettes:
 MovePicLeft:
 	ld a, %11100100
 	ldh [rBGP], a
-	call UpdateGBCPal_BGP
+	call UpdateCGBPal_BGP
 MovePicLeft_NoPalUpdate:
 	ld a, 119
 	ldh [rWX], a

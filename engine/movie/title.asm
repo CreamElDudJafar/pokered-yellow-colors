@@ -144,7 +144,7 @@ ENDC
 	call GBPalNormal
 	ld a, %11100100
 	ldh [rOBP0], a
-	call UpdateGBCPal_OBP0
+	call UpdateCGBPal_OBP0
 
 	push de
 	lb de, CONVERT_BGP, 2
