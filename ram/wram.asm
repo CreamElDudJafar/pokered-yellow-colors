@@ -2039,11 +2039,11 @@ UNION
 NEXTU
 
 wCGBBasePalPointers:: ds NUM_ACTIVE_PALS * 2 ; 8 bytes
-wCGBPal:: ds PALETTE_SIZE ; 8 bytes
+wCGBPal:: ds PAL_SIZE ; 8 bytes
 wLastBGP::db
 wLastOBP0::db
 wLastOBP1::db 
-wBGPPalsBuffer:: ds (NUM_ACTIVE_PALS + 1) * PALETTE_SIZE ; 32 bytes
+wBGPPalsBuffer:: ds (NUM_ACTIVE_PALS + 1) * PAL_SIZE ; 32 bytes
 wdef5:: db
 
 ENDU
