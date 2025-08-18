@@ -2595,10 +2595,10 @@ AnimationShakeEnemyHUD:
 
 	ldh a, [hCGB]
 	and a
-	jr z, .notGBC
+	jr z, .notCGB
 	ld d, 13
 	farcall LoadBGMapAttributes
-.notGBC
+.notCGB
 
 ; Move the window so that the row below the enemy HUD (in BG map 0) lines up
 ; with the top row of the window on the screen. This makes it so that the window
@@ -2635,10 +2635,10 @@ AnimationShakeEnemyHUD:
 	call BattleAnimCopyTileMapToVRAM
 	ldh a, [hCGB]
 	and a
-	jr z, .notGBC2
+	jr z, .notCGB2
 	ld d, 11
 	farcall LoadBGMapAttributes
-.notGBC2
+.notCGB2
 	xor a
 	ldh [hWY], a
 	call SaveScreenTilesToBuffer1

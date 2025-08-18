@@ -173,7 +173,7 @@ BGMapAttributes_PartyMenu:
 	db $01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
 	db $01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
 
-BGMapAttributes_NidorinoIntro:	;gbcnote - modified for red/blue version
+BGMapAttributes_NidorinoIntro:
 	db $23
 	dw $000d
 	db $00
@@ -208,7 +208,7 @@ BGMapAttributes_NidorinoIntro:	;gbcnote - modified for red/blue version
 	db $01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01
 	db $01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01
 
-BGMapAttributes_TitleScreen:	;gbcnote - modified the pal mappings to work better with red/blue version
+BGMapAttributes_TitleScreen:
 	db $23
 	dw $024d
 	db $00

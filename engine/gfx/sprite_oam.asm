@@ -135,7 +135,7 @@ PrepareOAMData::
 	push af
 	
 	res 3, a ;0=vram0 & 1=vram1
-	and %11111100	;if on GBC, default to OBJ pal 0 or 4
+	and %11111100	;if on CGB, default to OBJ pal 0 or 4
 	res 2, a; default of OBP0 uses palette 0
 	bit 4, a ; 0=OBP0 or 1=OBP1
 	jr z, .spriteusesOBP0

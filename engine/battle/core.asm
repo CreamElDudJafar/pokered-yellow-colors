@@ -6817,7 +6817,7 @@ DetermineWildOpponent:
 	callfar TryDoWildEncounter
 	ret nz
 InitBattleCommon:
-	callfar GBCSetCPU1xSpeed
+	callfar CGBSetCPU1xSpeed
 	ld a, [wMapPalOffset]
 	push af
 	ld hl, wLetterPrintingDelayFlags

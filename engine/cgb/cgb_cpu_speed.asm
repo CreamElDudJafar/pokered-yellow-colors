@@ -1,17 +1,17 @@
-;Sets 1x CPU speed if we're on GBC
-GBCSetCPU1xSpeed::
+;Sets 1x CPU speed if we're on CGB
+CGBSetCPU1xSpeed::
 	ldh a, [hCGB]
 	and a
-	ret z ; double speed is only a GBC feature
+	ret z ; double speed is only a CGB feature
 	ldh a, [rKEY1]
 	and %10000000
 	jr nz, ToggleCPUSpeed
 	ret
-;Set 2x cpu speed if we're on GBC
-GBCSetCPU2xSpeed::
+;Set 2x cpu speed if we're on CGB
+CGBSetCPU2xSpeed::
 	ldh a, [hCGB]
 	and a
-	ret z ; double speed is only a GBC feature
+	ret z ; double speed is only a CGB feature
 	ldh a, [rKEY1]
 	and %10000000
 	ret nz

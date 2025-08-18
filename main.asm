@@ -366,5 +366,5 @@ SECTION "CGB Mode Code", ROMX
 
 INCLUDE "data/sgb/bg_map_attributes.asm"
 INCLUDE "engine/gfx/bg_map_attributes.asm"
-INCLUDE "engine/cgb/gbc_cpu_speed.asm"
+INCLUDE "engine/cgb/cgb_cpu_speed.asm"
 INCLUDE "engine/gfx/scroll_gfx_horizontally.asm"

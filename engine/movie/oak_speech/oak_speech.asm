@@ -40,7 +40,7 @@ PrepareOakSpeech:
 	jp CopyData
 
 OakSpeech:
-	callfar GBCSetCPU1xSpeed
+	callfar CGBSetCPU1xSpeed
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
 	ld a, BANK(Music_Routes2)

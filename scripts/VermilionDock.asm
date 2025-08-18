@@ -38,7 +38,7 @@ VermilionDock_Script:
 
 VermilionDockSSAnneLeavesScript:
 	SetEventForceReuseHL EVENT_SS_ANNE_LEFT
-	callfar GBCSetCPU1xSpeed
+	callfar CGBSetCPU1xSpeed
 	call GBPalNormal
 	ld a, SFX_STOP_ALL_MUSIC
 	ld [wJoyIgnore], a
@@ -120,7 +120,7 @@ VermilionDockSSAnneLeavesScript:
 	dec hl
 	ld [hl], c
 	call LoadPlayerSpriteGraphics
-	callfar GBCSetCPU2xSpeed
+	callfar CGBSetCPU2xSpeed
 	ld hl, wNumberOfWarps
 	dec [hl]
 	ret
