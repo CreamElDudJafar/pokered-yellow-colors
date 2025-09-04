@@ -733,14 +733,14 @@ TransferCurBGPData::
 	ldh a, [rLCDC]
 	and LCDC_ON
 	jr nz, .lcdEnabled
-	rept PAL_COLORS
+	REPT PAL_COLORS
 	call TransferPalColorLCDDisabled
-	endr
+	ENDR
 	jr .done
 .lcdEnabled
 	REPT PAL_COLORS
 	call TransferPalColorLCDEnabled
-	endr
+	ENDR
 .done
 	pop de
 	ret	
@@ -814,12 +814,12 @@ TransferCurOBPData:
 	jr nz, .lcdEnabled
 	REPT PAL_COLORS
 	call TransferPalColorLCDDisabled
-	endr
+	ENDR
 	jr .done
 .lcdEnabled
 	REPT PAL_COLORS
 	call TransferPalColorLCDEnabled
-	endr
+	ENDR
 .done
 	pop de
 	ret	
