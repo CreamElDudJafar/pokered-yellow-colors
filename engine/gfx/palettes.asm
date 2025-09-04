@@ -611,7 +611,7 @@ InitCGBPalettes:
 	;otherwise hl points to a different pal packet or wPalPacket
 	inc hl
 
-	For index, NUM_ACTIVE_PALS
+	FOR index, NUM_ACTIVE_PALS
 		IF index > 0
 			pop hl
 		ENDC
@@ -686,7 +686,7 @@ DMGPalToCGBPal::
 	ldh a, [rOBP1]
 	ld [wLastOBP1], a
 .convert
-    For color_index, PAL_COLORS
+    FOR color_index, PAL_COLORS
 		ld b, a	;"B" now holds the palette data
 		and %11	;"A" now has just the value for the shade of palette color 0
 		call .GetColorAddress
@@ -851,7 +851,7 @@ _UpdateCGBPal_BGP::
 	;otherwise a partial update (like during a screen whiteout) can be distracting
 	ld hl, hFlagsFFFA
 	set 1, [hl]
-    For index, NUM_ACTIVE_PALS
+    FOR index, NUM_ACTIVE_PALS
 		ld a, [wCGBBasePalPointers + index * 2]
 		ld e, a
 		ld a, [wCGBBasePalPointers + index * 2 + 1]
