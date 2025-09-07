@@ -6397,7 +6397,7 @@ LoadPlayerBackPic:
 	jr nz, .loop
 	ld de, vBackPic
 	call InterlaceMergeSpriteBuffers
-	ld a, $a
+	ld a, RAMG_SRAM_ENABLE
 	ld [rRAMG], a
 	xor a
 	ld [rRAMB], a
