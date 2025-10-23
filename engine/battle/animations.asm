@@ -598,6 +598,7 @@ SetAnimationPalette:
 	ld a, $6c
 	ldh [rOBP1], a
 	call UpdateGBCPal_OBP0
+	call UpdateGBCPal_OBP1
 	ret
 
 PlaySubanimation:
@@ -711,8 +712,8 @@ DoBallTossSpecialEffects:
 	jr nc, .skipFlashingEffect
 .flashingEffect ; do a flashing effect if it's Master Ball or Ultra Ball
 	ldh a, [rOBP0]
-	call UpdateGBCPal_OBP0
 	xor %00111100 ; complement colors 1 and 2
+	call UpdateGBCPal_OBP0
 	ldh [rOBP0], a
 .skipFlashingEffect
 	ld a, [wSubAnimCounter]

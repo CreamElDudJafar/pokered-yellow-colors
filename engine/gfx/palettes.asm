@@ -243,17 +243,6 @@ SetPal_TrainerCard:
 	ld de, wTrainerCardBlkPacket
 	ret
 
-;gbcnote - added more pal functions
-SetPal_PikachusBeach::
-	ld hl, PalPacket_PikachusBeach
-	ld de, BlkPacket_WholeScreen
-	ret
-
-SetPal_PikachusBeachTitle::
-	ld hl, PalPacket_PikachusBeachTitle
-	ld de, UnknownPacket_72751
-	ret
-
 SetPalFunctions:
 ; entries correspond to SET_PAL_* constants
 	dw SetPal_BattleBlack
@@ -270,8 +259,6 @@ SetPalFunctions:
 	dw SetPal_PokemonWholeScreen
 	dw SetPal_GameFreakIntro
 	dw SetPal_TrainerCard
-	dw SetPal_PikachusBeach
-	dw SetPal_PikachusBeachTitle
 
 ; The length of the blk data of each badge on the Trainer Card.
 ; The Rainbow Badge has 3 entries because of its many colors.
