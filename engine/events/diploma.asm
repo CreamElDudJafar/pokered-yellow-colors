@@ -80,7 +80,7 @@ UnusedPlayerNameLengthFunc:
 	lb bc, $ff, $00
 .loop
 	ld a, [hli]
-	cp "@"
+	cp '@'
 	ret z
 	dec c
 	jr .loop
