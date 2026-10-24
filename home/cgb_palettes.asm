@@ -66,7 +66,7 @@ UpdateCGBPal_OBP1::
 	pop af
 	ret
 
-Func_3082:: ; added from pokeyellow - update audio so it doesn't "lag"
+UpdateAudioDuringLoadBGMapAttributes:: ; added from pokeyellow - update audio so it doesn't "lag"
 	ldh a, [hLoadedROMBank]
 	push af
 	call FadeOutAudio
