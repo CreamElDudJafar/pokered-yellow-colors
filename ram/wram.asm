@@ -2051,7 +2051,7 @@ wLastBGP::db
 wLastOBP0::db
 wLastOBP1::db 
 wBGPPalsBuffer:: ds (NUM_ACTIVE_PALS + 1) * PAL_SIZE ; 32 bytes
-wdef4:: db
+wBattleObjPalID:: db
 
 ENDU
 
